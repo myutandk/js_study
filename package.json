@@ -1,0 +1,16 @@
+{
+  "name": "js_study",
+  "version": "1.0.0",
+  "description": "This is a basic web application using plain JavaScript, HTML, and CSS.",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
