@@ -1,11 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+    font-family: sans-serif;
+    color: #666;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
+    margin: 4px 4px;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #79a8a9;
+    color: #fff;
     cursor: pointer;
+}
+
+input {
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    padding: 12px 20px;
+}
+
+.input_area {
+    background-color: #c6e5d9;
+    width: 400px;
+    height: 50px;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+.incomplete-area{
+    border: 2px solid #aacfd0;
+    width: 400px;
+    min-height: 300px;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.complete-area{
+    border: 2px solid #aacfd0;
+    width: 400px;
+    min-height: 300px;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+    background-color: #c9dede;
+}
+
+.title{
+    text-align: center;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.list-row{
+    display: flex;
+    align-items: center;
+}
+
+.todo-item{
+    margin: 8px;
 }
