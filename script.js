@@ -26,7 +26,7 @@ const onClickMovetoDone = (task) => {
         //戻すボタンを押された際に押されたボタンのliタグを削除
         const tempDiv = returnButton.closest(".list-row");
         const returnTask = tempDiv.querySelector(".done-item").textContent
-        document.getElementById("complete-list").removeChild(returnButton.closest("li"));
+        returnButton.closest("li").remove();
         makeTask(returnTask)
     });
 
@@ -34,8 +34,7 @@ const onClickMovetoDone = (task) => {
     deleteButton.innerText = "削除";
     deleteButton.addEventListener("click", () => {
         //削除ボタンを押された際に押されたボタンのliタグを削除
-        const deleteTarget = deleteButton.closest("li");
-        document.getElementById("complete-list").removeChild(deleteTarget)
+        deleteButton.closest("li").remove();
     });
 
     div.appendChild(p);
@@ -64,15 +63,15 @@ const makeTask = (taskText) => {
     completeButton.addEventListener("click", () => {
         const tempDiv = completeButton.closest(".list-row");
         const donTaskText = tempDiv.querySelector(".todo-item").textContent
-        document.getElementById("incomplete-list").removeChild(completeButton.closest("li"))
+        // document.getElementById("incomplete-list").removeChild(completeButton.closest("li"))
+        completeButton.closest("li").remove()
         onClickMovetoDone(donTaskText);
     });
 
     const deleteButton = document.createElement("button");
     deleteButton.addEventListener("click", () => {
         //削除ボタンを押された際に押されたボタンのliタグを削除
-        const deleteTarget = deleteButton.closest("li");
-        document.getElementById("incomplete-list").removeChild(deleteTarget)
+        deleteButton.closest("li").remove();
     });
     deleteButton.innerText = "削除";
 
@@ -84,4 +83,4 @@ const makeTask = (taskText) => {
     document.getElementById("incomplete-list").appendChild(li);
 }
 
-document.getElementById("add-button").addEventListener("click", onClickAdd)
+document.getElementById("add-button").addEventListener("click", onClickAdd);
